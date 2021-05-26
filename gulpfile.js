@@ -70,12 +70,21 @@ function img() {
         .pipe(dest('./assets/img/'));
 }
 
+// Optimize fonts
+
+function fonts() {
+    return src('./src/fonts/*')
+        .pipe(imagemin())
+        .pipe(dest('./assets/fonts/'));
+}
+
 // Watch files
 
 function watchFiles() {
     watch('./src/styles/**/*', css);
     watch('./src/js/**/*', js);
     watch('./src/img/**/*', img);
+    watch('./src/fonts/**/*', fonts);
 }
 
 // BrowserSync
@@ -92,5 +101,5 @@ function browserSync() {
 // Tasks to define the execution of the functions simultaneously or in series
 
 exports.watch = parallel(watchFiles, browserSync);
-exports.default = series(clear, parallel(js, css, img));
+exports.default = series(clear, parallel(js, css, img, fonts));
     

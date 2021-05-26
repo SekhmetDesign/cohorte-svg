@@ -74,7 +74,11 @@
 </head>
 
 <body>
-	<!-- Simple Header navigation bar + Site logo
+	<div class="site-bg">
+
+	</div>
+	<div class="site-content">
+		<!-- Simple Header navigation bar + Site logo
 		--based from Projet website (2019 edition) -->
         <header id="header" class="header">
             <nav class="nav container-wrapper">
@@ -83,8 +87,6 @@
                         <img src="assets/img/logo-black.svg" class="nav-home-logo" id="logo-dark" alt="Projet - Logo">
                         <img src="assets/img/logo-white.svg" class="nav-home-logo" id="logo-light" alt="Projet - Logo">
                     </a>
-
-                    <a href="index.html" id="lang">en</a>
                 </div>
 
                 <div class="nav-right" id="overlay">
@@ -95,12 +97,9 @@
                         <li class="nav-list-item">
                             <a href="styleguide.html" class="">HTML Components</a>
                         </li>
-                        <li class="nav-list-item">
-                            <a href="content.html" class="">Demo - Content</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="fullwidth.html" class="">Demo - Full-width</a>
-                        </li>
+						<li class="nav-list-item">
+							<a href="index.html" id="lang" class="">en</a>
+						</li>
                     </ul>
                 </div>
 
@@ -111,382 +110,689 @@
                 </div>
             </nav>
         </header>
+		<!-- END Simple Header navigation bar + Site logo -->
 
-	<!-- END Simple Header navigation bar + Site logo -->
-
-	<!-- Styleguide -->
-	<div id="sg-app" class="container-wrapper">
-		<div id="sg-sidebar">
-			<!-- Navigation -->
-			<nav class="styleguide-menu">
-				<a href="#sg-brandColors">Brand Colors</a>
-				<a href="#sg-heading">Heading</a>
-				<a href="#sg-paragraph">Paragraph</a>
-				<a href="#sg-blockquote">Blockquote</a>
-				<a href="#sg-tables">Tables</a>
-				<a href="#sg-links">Links</a>
-				<a href="#sg-buttons">Buttons</a>
-				<a href="#sg-pagination">Pagination</a>
-				<a href="#sg-breadcrumb">Breadcrumb</a>
-				<a href="#sg-graphics-circle">Graphics - circle</a>
-				<a href="#sg-progress-bar-in-card">Graphics - progress bar in card element</a>
-				<a href="#sg-progress-bar">Graphics - simple progress bar</a>
-				<a href="#sg-form">Forms</a>
-				<a href="#sg-searchcta">Search CTA</a>
-				<a href="#sg-messages">Messages</a>
-				<a href="#sg-cards">Cards</a>
-				<a href="#sg-image-responsive">Responsive Images</a>
-				<a href="#sg-picture-responsive">Responsive Picture</a>
-				<a href="#sg-videos">Responsive Videos</a>
-				<!--<a href="#sg-grid">Grid</a>-->
-				<!-- <a href="#sg-list">List</a> -->
-				<!-- <a href="#sg-article-info">Article Informations Block</a> -->
-				<!-- <a href="#sg-tags">Tags</a> -->
-				<!-- <a href="#sg-stats-block">Statistics Block</a> -->
-				<!-- <a href="#sg-separator">Separator</a> -->
-				<!-- <a href="#sg-topics-indicators">Topics Indicators</a> -->
-				<!-- <a href="#sg-icons">Icons</a> -->
-			</nav>
-		</div>
-
-		<div id="sg-container">
-			<!-- Colors -->
-			<div>
-				<span id="sg-brandColors" class="styleguide-title"><span>Brand Colors</span></span>
-				<h6>$color-base</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand brand-base-x-light-bg">x-light</span>
-					<span class="styleguide-brand brand-base-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-base-mid-light-bg">mid-light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-base-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-base-dark-bg">dark</span>
-				</span>
-				<h6>$color-link</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand brand-link-x-light-bg">x-light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-link-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-link-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-link-dark-bg">dark</span>
-				</span>
-				<h6>$color-error</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand styleguide-brand-reverse brand-error-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-light-bg">mid-light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-error-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-dark-bg">mid-dark</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-error-dark-bg">dark</span>
-				</span>
-				<h6>palette(vert)</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand styleguide-brand-reverse brand-green-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-green-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-green-dark-bg">dark</span>
-				</span>
-				<h6>palette(orange)</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand styleguide-brand-reverse brand-orange-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-orange-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-orange-dark-bg">dark</span>
-				</span>
-				<h6>palette(blue)</h6>
-				<span class="styleguide-brands">
-					<span class="styleguide-brand brand-blue-x-light-bg">x-light</span>
-					<span class="styleguide-brand brand-blue-light-bg">light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-blue-mid-light-bg">mid-light</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-blue-bg">base</span>
-					<span class="styleguide-brand styleguide-brand-reverse brand-blue-dark-bg">dark</span>
-				</span>
+		<!-- Styleguide -->
+		<div id="sg-app" class="container-wrapper">
+			<div id="sg-sidebar">
+				<!-- Navigation -->
+				<nav class="styleguide-menu">
+					<a href="#sg-brandColors">Brand Colors</a>
+					<a href="#sg-heading">Heading</a>
+					<a href="#sg-paragraph">Paragraph</a>
+					<a href="#sg-blockquote">Blockquote</a>
+					<a href="#sg-tables">Tables</a>
+					<a href="#sg-links">Links</a>
+					<a href="#sg-buttons">Buttons</a>
+					<a href="#sg-pagination">Pagination</a>
+					<a href="#sg-breadcrumb">Breadcrumb</a>
+					<a href="#sg-graphics-circle">Graphics - circle</a>
+					<a href="#sg-progress-bar-in-card">Graphics - progress bar in card element</a>
+					<a href="#sg-progress-bar">Graphics - simple progress bar</a>
+					<a href="#sg-form">Forms</a>
+					<a href="#sg-searchcta">Search CTA</a>
+					<a href="#sg-messages">Messages</a>
+					<a href="#sg-cards">Cards</a>
+					<a href="#sg-image-responsive">Responsive Images</a>
+					<a href="#sg-picture-responsive">Responsive Picture</a>
+					<a href="#sg-videos">Responsive Videos</a>
+					<!--<a href="#sg-grid">Grid</a>-->
+					<!-- <a href="#sg-list">List</a> -->
+					<!-- <a href="#sg-article-info">Article Informations Block</a> -->
+					<!-- <a href="#sg-tags">Tags</a> -->
+					<!-- <a href="#sg-stats-block">Statistics Block</a> -->
+					<!-- <a href="#sg-separator">Separator</a> -->
+					<!-- <a href="#sg-topics-indicators">Topics Indicators</a> -->
+					<!-- <a href="#sg-icons">Icons</a> -->
+				</nav>
 			</div>
 
-			<hr>
-
-			<!-- Typography -->
-			<div>
-				<span id="sg-heading" class="styleguide-title"><span>Typography</span></span>
-				<span class="styleguide-title"><span>Headings</span></span>
-				<div class="sg-heading-style">
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 1</span><h1>The spectacle before us was<br> indeed sublime. <span>48px, Bold</span></h1>
-					</span>
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 2</span><h2>The spectacle before us was indeed<br> sublime. <span>40px, Bold</span></h2>
-					</span>
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 3</span><h3>The spectacle before us was indeed sublime. <span>32px, Bold</span></h3>
-					</span>
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 4</span><h4>The spectacle before us was indeed sublime. <span>28px, Bold</span></h4>
-					</span>
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 5</span><h5>The spectacle before us was indeed sublime. <span>24px, Bold</span></h5>
-					</span>
-					<span class="line-container">
-						<span class="styleguide-sub-title">Heading 6</span><h6>The spectacle before us was indeed sublime. <span>20px, Bold</span></h6>
-					</span>
-				</div>
-
-				<span class="styleguide-title"><span>Paragraphs</span></span>
-				<div id="sg-paragraph">
-					<span class="line-container">
-						<span class="styleguide-sub-title">Body text</span>
-						<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.<span class="details-component">16/28 pts, Regular</span></p>
-					</span>
-
-					<span class="line-container">
-						<span class="styleguide-sub-title">Small text</span>
-						<p class="small">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.<span class="details-component">14/26 pts, Regular</span></p>
-					</span>
-
-					<span class="line-container">
-						<span class="styleguide-sub-title">blockquote</span>
-						<blockquote><p>Everything is work in progress. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque</p></blockquote>
-					</span>
-
-					<span class="line-container">
-						<span class="styleguide-sub-title">Quote</span>
-						<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the <q>same illusion which lifts the horizon of the sea to the level of the spectator on a hillside</q>, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
-					</span>
-				</div>
-			</div>
-
-			<hr>
-
-			<!-- Tables -->
-			<div>
-				<span id="sg-tables" class="styleguide-title"><span>Tables</span></span>
-				<!-- tables -->
-				<p>Add the <code>table</code> class to any element. The class will add padding, border and emphasized table header. For hoverable table rows, you can add the <code>table-hover</code> class to enable hover style. Use the active class to make <code>tr</code> element highlighted.</p>
+			<div id="sg-container">
+				<!-- Colors -->
 				<div>
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th>name</th>
-								<th>genre</th>
-								<th>release date</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>The Shawshank Redemption</td>
-								<td>Crime, Drama</td>
-								<td>14 October 1994</td>
-							</tr>
-							<tr class="active">
-								<td>The Shawshank Redemption</td>
-								<td>Crime, Drama</td>
-								<td>14 October 1994</td>
-							</tr>
-							<tr>
-								<td>The Shawshank Redemption</td>
-								<td>Crime, Drama</td>
-								<td>14 October 1994</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<!-- Interactive elements -->
-			<div>
-				<!-- Links -->
-				<div id="sg-links">
-					<span class="styleguide-title"><span>Links</span></span>
-					<p>Links styling as they appear in content. Icons currently coming from custom Projet icon library, created with Icomoon.</p>
-					<div>
-						<span class="styleguide-sub-title">Default link</span>
-						<p>Ypu can add a <a href="#">default link</a> here.</p>
-					</div>
-					<div>
-						<span class="styleguide-sub-title">Link with arrow</span>
-						<p>Ypu can add a <a href="#">link with an arrow <i class="i-arrow-right"></i></a> here.</p>
-					</div>
-					<div>
-						<span class="styleguide-sub-title">Link with other icon</span>
-						<p>Ypu can add a <a href="#">link with an icon <i class="i-search"></i></a> here.</p>
-					</div>
+					<span id="sg-brandColors" class="styleguide-title"><span>Brand Colors</span></span>
+					<h6>$color-base</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand brand-base-x-light-bg">x-light</span>
+						<span class="styleguide-brand brand-base-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-base-mid-light-bg">mid-light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-base-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-base-dark-bg">dark</span>
+					</span>
+					<h6>$color-link</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand brand-link-x-light-bg">x-light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-link-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-link-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-link-dark-bg">dark</span>
+					</span>
+					<h6>$color-error</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand styleguide-brand-reverse brand-error-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-light-bg">mid-light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-error-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-dark-bg">mid-dark</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-error-dark-bg">dark</span>
+					</span>
+					<h6>palette(vert)</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand styleguide-brand-reverse brand-green-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-green-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-green-dark-bg">dark</span>
+					</span>
+					<h6>palette(orange)</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand styleguide-brand-reverse brand-orange-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-orange-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-orange-dark-bg">dark</span>
+					</span>
+					<h6>palette(blue)</h6>
+					<span class="styleguide-brands">
+						<span class="styleguide-brand brand-blue-x-light-bg">x-light</span>
+						<span class="styleguide-brand brand-blue-light-bg">light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-blue-mid-light-bg">mid-light</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-blue-bg">base</span>
+						<span class="styleguide-brand styleguide-brand-reverse brand-blue-dark-bg">dark</span>
+					</span>
 				</div>
 
-				<!-- Buttons -->
-				<div id="sg-buttons">
-					<span class="styleguide-title"><span>Buttons</span></span>
-					<p>Buttons include simple button styles for actions in different types and sizes. You can add <code>.xsmall</code> <code>.small</code> <code>.large</code> <code>.medium</code> <code>.b-disable</code> classes to your button.</p>
-					<div>
-						<span class="line-container">
-							<span class="styleguide-sub-title">Default Button</span>
-							<a class="b" href="#">Button</a>
+				<hr>
 
+				<!-- Typography -->
+				<div>
+					<span id="sg-heading" class="styleguide-title"><span>Typography</span></span>
+					<span class="styleguide-title"><span>Headings</span></span>
+					<div class="sg-heading-style">
+						<span class="line-container">
+							<span class="styleguide-sub-title">Heading 1</span><h1>The spectacle before us was<br> indeed sublime. <span>48px, Bold</span></h1>
 						</span>
 						<span class="line-container">
-							<span class="styleguide-sub-title">Invert Button</span>
-							<a class="b b1" href="#">Button</a>
+							<span class="styleguide-sub-title">Heading 2</span><h2>The spectacle before us was indeed<br> sublime. <span>40px, Bold</span></h2>
 						</span>
 						<span class="line-container">
-							<span class="styleguide-sub-title">Loading Button</span>
-							<button class="b b-loading"><span></span>Submit</button>
+							<span class="styleguide-sub-title">Heading 3</span><h3>The spectacle before us was indeed sublime. <span>32px, Bold</span></h3>
 						</span>
 						<span class="line-container">
-							<span class="styleguide-sub-title">Disable Button</span>
-							<button class="b b-loading b-disable"><span></span>Submit</button>
+							<span class="styleguide-sub-title">Heading 4</span><h4>The spectacle before us was indeed sublime. <span>28px, Bold</span></h4>
+						</span>
+						<span class="line-container">
+							<span class="styleguide-sub-title">Heading 5</span><h5>The spectacle before us was indeed sublime. <span>24px, Bold</span></h5>
+						</span>
+						<span class="line-container">
+							<span class="styleguide-sub-title">Heading 6</span><h6>The spectacle before us was indeed sublime. <span>20px, Bold</span></h6>
 						</span>
 					</div>
-				</div>
 
-				<!-- Pagination -->
-				<div id="sg-pagination">
-					<span class="styleguide-title"><span>Paginations</span></span>
-					<p>This is the basic pagination code. For sure you can modify <code>.previous</code> and <code>.next</code> class and adjust <code>hover</code> and <code>active</code> effects.</p>
-					<div>
+					<span class="styleguide-title"><span>Paragraphs</span></span>
+					<div id="sg-paragraph">
 						<span class="line-container">
-							<span class="styleguide-sub-title">Default Pagination</span>
-							<nav class="pagination">
-								<ul>
-									<li><a class="previous" href="#">❮</a></li>
-									<li><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li><a href="#">6</a></li>
-									<li><a class="next" href="#">❯</a></li>
-								</ul>
-							</nav/>
+							<span class="styleguide-sub-title">Body text</span>
+							<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.<span class="details-component">16/28 pts, Regular</span></p>
 						</span>
+
 						<span class="line-container">
-							<span class="styleguide-sub-title">Pagination Active state</span>
-							<nav class="pagination">
-								<ul>
-									<li><a class="previous" href="#">❮</a></li>
-									<li><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a class="active" href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li><a href="#">6</a></li>
-									<li><a class="next" href="#">❯</a></li>
-								</ul>
-							</nav/>
+							<span class="styleguide-sub-title">Small text</span>
+							<p class="small">Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.<span class="details-component">14/26 pts, Regular</span></p>
 						</span>
+
 						<span class="line-container">
-							<span class="styleguide-sub-title">Pagination with text</span>
-							<nav class="pagination pagination-text">
-								<ul>
-									<li class="page-item page-prev">
-										<a href="#">
-											<div class="page-item-subtitle">Previous</div>
-											<div class="page-item-title h5">Getting started</div>
-										</a>
-									</li>
-									<li class="page-item page-next">
-										<a href="#">
-											<div class="page-item-subtitle">Next</div>
-											<div class="page-item-title h5">Layout</div>
-										</a>
-									</li>
-								</ul>
-							</nav/>
+							<span class="styleguide-sub-title">blockquote</span>
+							<blockquote><p>Everything is work in progress. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque</p></blockquote>
+						</span>
+
+						<span class="line-container">
+							<span class="styleguide-sub-title">Quote</span>
+							<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the <q>same illusion which lifts the horizon of the sea to the level of the spectator on a hillside</q>, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.</p>
 						</span>
 					</div>
 				</div>
 
 				<hr>
 
-				<!-- breadcrumbs -->
-				<div id="sg-breadcrumb">
-					<span class="styleguide-title"><span>Breadcrumb</span></span>
-					<p>Add a container element with the <code>breadcrumb</code> class. And add child elements with the <code>breadcrumb-item</code> class.</p>
-
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="breadcrumb-item">
-							<a href="#">Settings</a>
-						</li>
-						<li class="breadcrumb-item">
-							<a href="#">Change avatar</a>
-						</li>
-					</ul>
+				<!-- Tables -->
+				<div>
+					<span id="sg-tables" class="styleguide-title"><span>Tables</span></span>
+					<!-- tables -->
+					<p>Add the <code>table</code> class to any element. The class will add padding, border and emphasized table header. For hoverable table rows, you can add the <code>table-hover</code> class to enable hover style. Use the active class to make <code>tr</code> element highlighted.</p>
+					<div>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>name</th>
+									<th>genre</th>
+									<th>release date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>The Shawshank Redemption</td>
+									<td>Crime, Drama</td>
+									<td>14 October 1994</td>
+								</tr>
+								<tr class="active">
+									<td>The Shawshank Redemption</td>
+									<td>Crime, Drama</td>
+									<td>14 October 1994</td>
+								</tr>
+								<tr>
+									<td>The Shawshank Redemption</td>
+									<td>Crime, Drama</td>
+									<td>14 October 1994</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 
-				<hr>
-
-				<!-- Graphics - Circles -->
-				<div id="sg-graphics-circle">
-					<span class="styleguide-title"><span>Graphics - circle (anbimated in JS)</span></span>
-					<div class="cards">
-						<div class="card card-circle">
-							<a href="">
-								<div class="circle-graphics-wrapper">
-									<svg class="svg-main"viewBox="0 0 32 32">
-									<defs>
-										<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
-											<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
-											<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
-										</linearGradient>
-									</defs>
-										<circle class="circle-col" r="16" cx="16" cy="16"></circle>
-
-									</svg>
-									<svg class="svg-mask" viewBox="0 0 32 32">
-										<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
-									</svg>
-									<h2 class="graphics-percent">57%</h2>
-								</div>
-							</a>
+				<!-- Interactive elements -->
+				<div>
+					<!-- Links -->
+					<div id="sg-links">
+						<span class="styleguide-title"><span>Links</span></span>
+						<p>Links styling as they appear in content. Icons currently coming from custom Projet icon library, created with Icomoon.</p>
+						<div>
+							<span class="styleguide-sub-title">Default link</span>
+							<p>Ypu can add a <a href="#">default link</a> here.</p>
 						</div>
-						<div class="card card-circle">
-							<a href="">
-								<div class="circle-graphics-wrapper">
-									<svg class="svg-main"viewBox="0 0 32 32">
-									<defs>
-										<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
-											<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
-											<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
-										</linearGradient>
-									</defs>
-										<circle class="circle-col" r="16" cx="16" cy="16"></circle>
-
-									</svg>
-									<svg class="svg-mask" viewBox="0 0 32 32">
-										<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
-									</svg>
-									<h2 class="graphics-percent">28%</h2>
-								</div>
-							</a>
+						<div>
+							<span class="styleguide-sub-title">Link with arrow</span>
+							<p>Ypu can add a <a href="#">link with an arrow <i class="i-arrow-right"></i></a> here.</p>
 						</div>
-						<div class="card card-circle">
-							<a href="">
-								<div class="circle-graphics-wrapper">
-									<svg class="svg-main"viewBox="0 0 32 32">
-									<defs>
-										<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
-											<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
-											<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
-										</linearGradient>
-									</defs>
-										<circle class="circle-col" r="16" cx="16" cy="16"></circle>
+						<div>
+							<span class="styleguide-sub-title">Link with other icon</span>
+							<p>Ypu can add a <a href="#">link with an icon <i class="i-search"></i></a> here.</p>
+						</div>
+					</div>
 
-									</svg>
-									<svg class="svg-mask" viewBox="0 0 32 32">
-										<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
-									</svg>
-									<h2 class="graphics-percent">83%</h2>
-								</div>
-							</a>
+					<!-- Buttons -->
+					<div id="sg-buttons">
+						<span class="styleguide-title"><span>Buttons</span></span>
+						<p>Buttons include simple button styles for actions in different types and sizes. You can add <code>.xsmall</code> <code>.small</code> <code>.large</code> <code>.medium</code> <code>.b-disable</code> classes to your button.</p>
+						<div>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Default Button</span>
+								<a class="b" href="#">Button</a>
+
+							</span>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Invert Button</span>
+								<a class="b b1" href="#">Button</a>
+							</span>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Loading Button</span>
+								<button class="b b-loading"><span></span>Submit</button>
+							</span>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Disable Button</span>
+								<button class="b b-loading b-disable"><span></span>Submit</button>
+							</span>
+						</div>
+					</div>
+
+					<!-- Pagination -->
+					<div id="sg-pagination">
+						<span class="styleguide-title"><span>Paginations</span></span>
+						<p>This is the basic pagination code. For sure you can modify <code>.previous</code> and <code>.next</code> class and adjust <code>hover</code> and <code>active</code> effects.</p>
+						<div>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Default Pagination</span>
+								<nav class="pagination">
+									<ul>
+										<li><a class="previous" href="#">❮</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">6</a></li>
+										<li><a class="next" href="#">❯</a></li>
+									</ul>
+								</nav/>
+							</span>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Pagination Active state</span>
+								<nav class="pagination">
+									<ul>
+										<li><a class="previous" href="#">❮</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a class="active" href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">6</a></li>
+										<li><a class="next" href="#">❯</a></li>
+									</ul>
+								</nav/>
+							</span>
+							<span class="line-container">
+								<span class="styleguide-sub-title">Pagination with text</span>
+								<nav class="pagination pagination-text">
+									<ul>
+										<li class="page-item page-prev">
+											<a href="#">
+												<div class="page-item-subtitle">Previous</div>
+												<div class="page-item-title h5">Getting started</div>
+											</a>
+										</li>
+										<li class="page-item page-next">
+											<a href="#">
+												<div class="page-item-subtitle">Next</div>
+												<div class="page-item-title h5">Layout</div>
+											</a>
+										</li>
+									</ul>
+								</nav/>
+							</span>
+						</div>
+					</div>
+
+					<hr>
+
+					<!-- breadcrumbs -->
+					<div id="sg-breadcrumb">
+						<span class="styleguide-title"><span>Breadcrumb</span></span>
+						<p>Add a container element with the <code>breadcrumb</code> class. And add child elements with the <code>breadcrumb-item</code> class.</p>
+
+						<ul class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="#">Home</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">Settings</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">Change avatar</a>
+							</li>
+						</ul>
+					</div>
+
+					<hr>
+
+					<!-- Graphics - Circles -->
+					<div id="sg-graphics-circle">
+						<span class="styleguide-title"><span>Graphics - circle (anbimated in JS)</span></span>
+						<div class="cards">
+							<div class="card card-circle">
+								<a href="">
+									<div class="circle-graphics-wrapper">
+										<svg class="svg-main"viewBox="0 0 32 32">
+										<defs>
+											<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
+												<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
+												<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
+											</linearGradient>
+										</defs>
+											<circle class="circle-col" r="16" cx="16" cy="16"></circle>
+
+										</svg>
+										<svg class="svg-mask" viewBox="0 0 32 32">
+											<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
+										</svg>
+										<h2 class="graphics-percent">57%</h2>
+									</div>
+								</a>
+							</div>
+							<div class="card card-circle">
+								<a href="">
+									<div class="circle-graphics-wrapper">
+										<svg class="svg-main"viewBox="0 0 32 32">
+										<defs>
+											<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
+												<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
+												<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
+											</linearGradient>
+										</defs>
+											<circle class="circle-col" r="16" cx="16" cy="16"></circle>
+
+										</svg>
+										<svg class="svg-mask" viewBox="0 0 32 32">
+											<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
+										</svg>
+										<h2 class="graphics-percent">28%</h2>
+									</div>
+								</a>
+							</div>
+							<div class="card card-circle">
+								<a href="">
+									<div class="circle-graphics-wrapper">
+										<svg class="svg-main"viewBox="0 0 32 32">
+										<defs>
+											<linearGradient id="grad" x1="100%" y1="80%" x2="0%" y2="90%">
+												<stop offset="0%" style="stop-color:#57B86E;stop-opacity:1" />
+												<stop offset="100%" style="stop-color:#2812f1;stop-opacity:1" />
+											</linearGradient>
+										</defs>
+											<circle class="circle-col" r="16" cx="16" cy="16"></circle>
+
+										</svg>
+										<svg class="svg-mask" viewBox="0 0 32 32">
+											<circle class="circle-mask" r="16" cx="16" cy="16"></circle>
+										</svg>
+										<h2 class="graphics-percent">83%</h2>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<hr>
+					<!-- Graphics - Progress bar in cards elements -->
+					<div id="sg-progress-bar-in-card">
+						<span class="styleguide-title"><span>Graphics - Progress bar in cards elements</span></span>
+						<div class="cards is-flex">
+							<div class="card card-progress">
+								<a href="">
+									<div class="card-progress-container">
+										<div style="width:25%" class="progress-bar"></div>
+									</div>
+									<div class="card-image">
+										<figure>
+											<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="card-content">
+										<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+										<p class="has-text-centered">
+										$<span>721,530</span> toward $<span>1,000,000</span>
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="card card-progress">
+								<a href="">
+									<div class="card-progress-container">
+										<div style="width:45%" class="progress-bar"></div>
+									</div>
+									<div class="card-image">
+										<figure>
+											<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="card-content">
+										<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+										<p class="has-text-centered">
+										$<span>721,530</span> toward $<span>1,000,000</span>
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="card card-progress">
+								<a href="#">
+									<div class="card-progress-container">
+										<div style="width:75%" class="progress-bar"></div>
+									</div>
+									<div class="card-image">
+										<figure>
+											<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="card-content">
+										<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+										<p class="has-text-centered">
+										$<span>721,530</span> toward $<span>1,000,000</span>
+										</p>
+									</div>
+								</a>
+							</div>
+							<div class="card card-progress">
+								<a href="#">
+									<div class="card-progress-container">
+										<div style="width:10%" class="progress-bar"></div>
+									</div>
+									<div class="card-image">
+										<figure>
+											<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+										</figure>
+									</div>
+									<div class="card-content">
+										<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+										<p class="has-text-centered">
+										$<span>721,530</span> toward $<span>1,000,000</span>
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<hr>
+					<!-- Graphics - Simple progress bars -->
+					<div id="sg-progress-bar">
+						<span class="styleguide-title"><span>Graphics - Progress bar with titles (animated in JS)</span></span>
+						<div>
+							<div class="graphs-progress-container">
+								<div class="graph-progress-bar">$81.5M</div>
+							</div>
+							<h6 class="title title-h6 is-marginless">Title here</h6>
+							<div class="graphs-progress-container">
+								<div class="graph-progress-bar">$55.5M</div>
+							</div>
+							<h6 class="title title-h6 is-marginless">Another title</h6>
+							<div class="graphs-progress-container">
+								<div class="graph-progress-bar">$42.8M</div>
+							</div>
+							<h6 class="title title-h6 is-marginless">Look at this</h6>
+							<div class="graphs-progress-container">
+								<div class="graph-progress-bar">$38.2M</div>
+							</div>
+							<h6 class="title title-h6 is-marginless">Title</h6>
+							<div class="graphs-progress-container">
+								<div class="graph-progress-bar">$26.5M</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<hr>
-				<!-- Graphics - Progress bar in cards elements -->
-				<div id="sg-progress-bar-in-card">
-					<span class="styleguide-title"><span>Graphics - Progress bar in cards elements</span></span>
+
+				<!-- Forms -->
+				<div>
+					<span id="sg-form" class="styleguide-title"><span>Forms</span></span>
+					<!-- <div class="styleguide-background-color"> -->
+					<form>
+						<fieldset>
+							<ol>
+								<li>
+									<label>First Name</label>
+									<input type="text">
+								</li>
+								<li>
+									<label>Last Name</label>
+									<input type="text" placeholder="This is a placeholder">
+								</li>
+								<li>
+									<label>Email</label>
+									<input type="email">
+									<p class="field-help">Help text without an error message rutrum fau auctor.</p>
+								</li>
+								<li>
+									<label>Password</label>
+									<input type="password">
+									<label class="field-error">Error message felis euismod semper.</label>
+									<label class="field-help">Help text vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</label>
+								</li>
+								<li class="full">
+									<label for="textarea">Textarea</label>
+									<textarea id="textarea" rows="3"></textarea>
+								</li>
+							</ol>
+						</fieldset>
+
+						<span id="sg-forms" class="styleguide-title"><span>Radios &amp; Checkboxes</span></span>
+
+						<fieldset>
+							<ol>
+								<li>
+									<label>Checkbox</label>
+									<label class="checkbox">
+										<input type="checkbox" checked>
+										Checkbox 1
+									</label>
+									<label class="checkbox">
+										<input type="checkbox">
+										Checkbox 2
+									</label>
+									<label class="checkbox">
+										<input type="checkbox">
+										Checkbox 3
+									</label>
+								</li>
+								<li>
+									<label>Radio</label>
+									<label class="radio">
+										<input type="radio" name="radio1" checked>
+										Radio 1
+									</label>
+									<label class="radio">
+										<input type="radio" name="radio1">
+										Radio 2
+									</label>
+									<label class="radio">
+										<input type="radio" name="radio1">
+										Radio 3
+									</label>
+								</li>
+								<li class="full">
+									<label>Inline Checkbox</label>
+									<label class="checkbox inline">
+										<input type="checkbox" checked>
+										Checkbox 1
+									</label>
+									<label class="checkbox inline">
+										<input type="checkbox">
+										Checkbox 2
+									</label>
+								</li>
+								<li class="full">
+									<label>Inline Radio</label>
+									<label class="radio inline">
+										<input type="radio" name="radio2" checked>
+										Option one is this and that
+									</label>
+									<label class="radio inline">
+										<input type="radio" name="radio2">
+										Option two is this and that
+									</label>
+								</li>
+							</ol>
+						</fieldset>
+
+						<span id="sg-forms" class="styleguide-title"><span>Selects</span></span>
+
+						<fieldset>
+							<ol>
+								<li>
+									<label>Dropdown</label>
+									<select>
+										<option>Select...</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</li>
+								<li>
+									<label>Multicon-select</label>
+									<select multiple>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</li>
+							</ol>
+						</fieldset>
+
+						<span id="sg-forms" class="styleguide-title"><span>Other Fields</span></span>
+						<fieldset>
+							<ol>
+								<li>
+									<label for="fileInput">File input</label>
+									<input id="fileInput" type="file">
+								</li>
+								<li>
+									<p class="label">Switch</p>
+									<div class="switch">
+										<input class="switch__input" type="checkbox" id="switchCheckbox1">
+										<label aria-hidden="true" class="switch__label" for="switchCheckbox1">On</label>
+										<div aria-hidden="true" class="switch__marker"></div>
+									</div>
+								</li>
+								<li>
+									<!-- Source for this slider: https://codepen.io/seanstopnik/pen/CeLqA -->
+									<label for="slider">Slider</label>
+									<input id="slider" type="range" value="100" min="0" max="500">
+								</li>
+								<li>
+									<label for="url">Enter an https:// URL:</label>
+									<input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*"">
+								</li>
+								<li>
+									<label for="tel">Enter an phone number:</label>
+									<input name="tel" type='tel' pattern='[\(]\d{3}[\)]\d{3}[\-]\d{4}' title='Phone Number (Format: (999)999-9999)' placeholder="(999)999-9999)">
+								</li>
+								<li>
+									<label for="start">Start date:</label>
+									<input type="date" id="start" name="trip-start" value="2019-01-30" min="2019-01-01" max="2019-12-31">
+								</li>
+							</ol>
+						</fieldset>
+					</form>
+					<!-- </div> -->
+				</div>
+
+				<hr>
+
+				<!-- Search CTA -->
+				<!-- Based on Autocomplete JS
+				DOCUMENTATION: https://tarekraafat.github.io/autoComplete.js/#/?id=introduction -->
+				<div>
+					<span id="sg-searchcta" class="styleguide-title"><span>Search CTA</span></span>
+					<div class="autocomplete">
+						<input id="autoComplete" type="text" tabindex="1" placeholder="Search">
+						<div class="mode">
+							<strong>mode</strong>
+							<div class="toggele">
+								<div class="toggeler">Strict</div>
+							</div>
+						</div>
+						<p>Search results: <span class="selection"></span></p>
+					</div>
+				</div>
+
+				<hr>
+
+				<!-- Messages -->
+				<div>
+					<span id="sg-messages" class="styleguide-title"><span>Messages</span></span>
+					<div>
+						<div class="msg-info">
+							<i class="ti-thumb-up ti-medium"></i>
+							Info Messages. Donec id elit non mi porta eget met urabitur blandit tempus porttitor.
+						</div>
+
+						<div class="msg-success">
+							<i class="ti-info-alt ti-medium"></i>
+							Success Messages. Donec id elit non mi porta eget met urabitur blandit tempus porttitor.
+						</div>
+
+						<div class="msg-error">
+							<i class="ti-alert ti-medium"></i>
+							Error Message. Donec id elit non mi porta gravida at.
+						</div>
+
+					</div>
+				</div>
+
+				<hr>
+
+				<!-- Cards -->
+				<div class="position:relative;">
+					<span id="sg-cards" class="styleguide-title"><span>Cards</span></span>
 					<div class="cards is-flex">
-						<div class="card card-progress">
+						<div class="card card-style">
 							<a href="">
-								<div class="card-progress-container">
-									<div style="width:25%" class="progress-bar"></div>
-								</div>
 								<div class="card-image">
 									<figure>
 										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -500,11 +806,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="card card-progress">
+						<div class="card card-style">
 							<a href="">
-								<div class="card-progress-container">
-									<div style="width:45%" class="progress-bar"></div>
-								</div>
 								<div class="card-image">
 									<figure>
 										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -518,11 +821,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="card card-progress">
-							<a href="#">
-								<div class="card-progress-container">
-									<div style="width:75%" class="progress-bar"></div>
-								</div>
+						<div class="card card-style">
+							<a href="">
 								<div class="card-image">
 									<figure>
 										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -536,11 +836,83 @@
 								</div>
 							</a>
 						</div>
-						<div class="card card-progress">
-							<a href="#">
-								<div class="card-progress-container">
-									<div style="width:10%" class="progress-bar"></div>
+						<div class="card card-style">
+							<a href="">
+								<div class="card-image">
+									<figure>
+										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+									</figure>
 								</div>
+								<div class="card-content">
+									<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+									<p class="has-text-centered">
+									$<span>721,530</span> toward $<span>1,000,000</span>
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="card card-style">
+							<a href="">
+								<div class="card-image">
+									<figure>
+										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+									</figure>
+								</div>
+								<div class="card-content">
+									<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+									<p class="has-text-centered">
+									$<span>721,530</span> toward $<span>1,000,000</span>
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="card card-style">
+							<a href="">
+								<div class="card-image">
+									<figure>
+										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+									</figure>
+								</div>
+								<div class="card-content">
+									<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+									<p class="has-text-centered">
+									$<span>721,530</span> toward $<span>1,000,000</span>
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="card card-style">
+							<a href="">
+								<div class="card-image">
+									<figure>
+										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+									</figure>
+								</div>
+								<div class="card-content">
+									<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+									<p class="has-text-centered">
+									$<span>721,530</span> toward $<span>1,000,000</span>
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="card card-style">
+							<a href="">
+								<div class="card-image">
+									<figure>
+										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+									</figure>
+								</div>
+								<div class="card-content">
+									<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
+									<p class="has-text-centered">
+									$<span>721,530</span> toward $<span>1,000,000</span>
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="card card-style">
+							<a href="">
 								<div class="card-image">
 									<figure>
 										<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -558,463 +930,90 @@
 				</div>
 
 				<hr>
-				<!-- Graphics - Simple progress bars -->
-				<div id="sg-progress-bar">
-					<span class="styleguide-title"><span>Graphics - Progress bar with titles (animated in JS)</span></span>
-					<div>
-						<div class="graphs-progress-container">
-							<div class="graph-progress-bar">$81.5M</div>
-						</div>
-						<h6 class="title title-h6 is-marginless">Title here</h6>
-						<div class="graphs-progress-container">
-							<div class="graph-progress-bar">$55.5M</div>
-						</div>
-						<h6 class="title title-h6 is-marginless">Another title</h6>
-						<div class="graphs-progress-container">
-							<div class="graph-progress-bar">$42.8M</div>
-						</div>
-						<h6 class="title title-h6 is-marginless">Look at this</h6>
-						<div class="graphs-progress-container">
-							<div class="graph-progress-bar">$38.2M</div>
-						</div>
-						<h6 class="title title-h6 is-marginless">Title</h6>
-						<div class="graphs-progress-container">
-							<div class="graph-progress-bar">$26.5M</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<hr>
-
-			<!-- Forms -->
-			<div>
-				<span id="sg-form" class="styleguide-title"><span>Forms</span></span>
-				<!-- <div class="styleguide-background-color"> -->
-				<form>
-					<fieldset>
-						<ol>
-							<li>
-								<label>First Name</label>
-								<input type="text">
-							</li>
-							<li>
-								<label>Last Name</label>
-								<input type="text" placeholder="This is a placeholder">
-							</li>
-							<li>
-								<label>Email</label>
-								<input type="email">
-								<p class="field-help">Help text without an error message rutrum fau auctor.</p>
-							</li>
-							<li>
-								<label>Password</label>
-								<input type="password">
-								<label class="field-error">Error message felis euismod semper.</label>
-								<label class="field-help">Help text vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</label>
-							</li>
-							<li class="full">
-								<label for="textarea">Textarea</label>
-								<textarea id="textarea" rows="3"></textarea>
-							</li>
-						</ol>
-					</fieldset>
-
-					<span id="sg-forms" class="styleguide-title"><span>Radios &amp; Checkboxes</span></span>
-
-					<fieldset>
-						<ol>
-							<li>
-								<label>Checkbox</label>
-								<label class="checkbox">
-									<input type="checkbox" checked>
-									Checkbox 1
-								</label>
-								<label class="checkbox">
-									<input type="checkbox">
-									Checkbox 2
-								</label>
-								<label class="checkbox">
-									<input type="checkbox">
-									Checkbox 3
-								</label>
-							</li>
-							<li>
-								<label>Radio</label>
-								<label class="radio">
-									<input type="radio" name="radio1" checked>
-									Radio 1
-								</label>
-								<label class="radio">
-									<input type="radio" name="radio1">
-									Radio 2
-								</label>
-								<label class="radio">
-									<input type="radio" name="radio1">
-									Radio 3
-								</label>
-							</li>
-							<li class="full">
-								<label>Inline Checkbox</label>
-								<label class="checkbox inline">
-									<input type="checkbox" checked>
-									Checkbox 1
-								</label>
-								<label class="checkbox inline">
-									<input type="checkbox">
-									Checkbox 2
-								</label>
-							</li>
-							<li class="full">
-								<label>Inline Radio</label>
-								<label class="radio inline">
-									<input type="radio" name="radio2" checked>
-									Option one is this and that
-								</label>
-								<label class="radio inline">
-									<input type="radio" name="radio2">
-									Option two is this and that
-								</label>
-							</li>
-						</ol>
-					</fieldset>
-
-					<span id="sg-forms" class="styleguide-title"><span>Selects</span></span>
-
-					<fieldset>
-						<ol>
-							<li>
-								<label>Dropdown</label>
-								<select>
-									<option>Select...</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</li>
-							<li>
-								<label>Multicon-select</label>
-								<select multiple>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</li>
-						</ol>
-					</fieldset>
-
-					<span id="sg-forms" class="styleguide-title"><span>Other Fields</span></span>
-					<fieldset>
-						<ol>
-							<li>
-								<label for="fileInput">File input</label>
-								<input id="fileInput" type="file">
-							</li>
-							<li>
-								<p class="label">Switch</p>
-								<div class="switch">
-									<input class="switch__input" type="checkbox" id="switchCheckbox1">
-									<label aria-hidden="true" class="switch__label" for="switchCheckbox1">On</label>
-									<div aria-hidden="true" class="switch__marker"></div>
-								</div>
-							</li>
-							<li>
-								<!-- Source for this slider: https://codepen.io/seanstopnik/pen/CeLqA -->
-								<label for="slider">Slider</label>
-								<input id="slider" type="range" value="100" min="0" max="500">
-							</li>
-							<li>
-								<label for="url">Enter an https:// URL:</label>
-								<input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*"">
-							</li>
-							<li>
-								<label for="tel">Enter an phone number:</label>
-								<input name="tel" type='tel' pattern='[\(]\d{3}[\)]\d{3}[\-]\d{4}' title='Phone Number (Format: (999)999-9999)' placeholder="(999)999-9999)">
-							</li>
-							<li>
-								<label for="start">Start date:</label>
-								<input type="date" id="start" name="trip-start" value="2019-01-30" min="2019-01-01" max="2019-12-31">
-							</li>
-						</ol>
-					</fieldset>
-				</form>
-				<!-- </div> -->
-			</div>
-
-			<hr>
-
-			<!-- Search CTA -->
-			<!-- Based on Autocomplete JS
-			DOCUMENTATION: https://tarekraafat.github.io/autoComplete.js/#/?id=introduction -->
-			<div>
-				<span id="sg-searchcta" class="styleguide-title"><span>Search CTA</span></span>
-				<div class="autocomplete">
-					<input id="autoComplete" type="text" tabindex="1" placeholder="Search">
-					<div class="mode">
-						<strong>mode</strong>
-						<div class="toggele">
-							<div class="toggeler">Strict</div>
-						</div>
-					</div>
-					<p>Search results: <span class="selection"></span></p>
-				</div>
-			</div>
-
-			<hr>
-
-			<!-- Messages -->
-			<div>
-				<span id="sg-messages" class="styleguide-title"><span>Messages</span></span>
+				<!-- Images code -->
 				<div>
-					<div class="msg-info">
-						<i class="ti-thumb-up ti-medium"></i>
-						Info Messages. Donec id elit non mi porta eget met urabitur blandit tempus porttitor.
+					<span id="sg-images" class="styleguide-title"><span>Responsive Images</span></span>
+					<div id="sg-image-responsive">
+						<span class="styleguide-title"><span>< Img ></span></span>
+						<img src="/assets/images/example-original.jpg" srcset="/assets/images/example-480x640.jpg 480w, /assets/images/example-768x768.jpg 768w, /assets/images/example-1024x1024.jpg 1024w" alt="example responsive image">
 					</div>
-
-					<div class="msg-success">
-						<i class="ti-info-alt ti-medium"></i>
-						Success Messages. Donec id elit non mi porta eget met urabitur blandit tempus porttitor.
-					</div>
-
-					<div class="msg-error">
-						<i class="ti-alert ti-medium"></i>
-						Error Message. Donec id elit non mi porta gravida at.
-					</div>
-
-				</div>
-			</div>
-
-			<hr>
-
-			<!-- Cards -->
-			<div class="position:relative;">
-				<span id="sg-cards" class="styleguide-title"><span>Cards</span></span>
-				<div class="cards is-flex">
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
-					</div>
-					<div class="card card-style">
-						<a href="">
-							<div class="card-image">
-								<figure>
-									<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-								</figure>
-							</div>
-							<div class="card-content">
-								<h5 class="title title-h5 has-text-centered">H5 Centered Title</h5>
-								<p class="has-text-centered">
-								$<span>721,530</span> toward $<span>1,000,000</span>
-								</p>
-							</div>
-						</a>
+					<hr>
+					<div id="sg-picture-responsive">
+						<span class="styleguide-title"><span>< Picture ></span></span>
+						<p>the &lt;picture&lg; html tag is usable only in the most recents browsers, but not usable in Internet Explorer, early version of Microsoft Edge (version 12 and below). source: <a href="https://caniuse.com/#search=picture">https://caniuse.com/#search=picture</a></p>
+						<picture>
+							<source srcset="/assets/images/example-480x640.jpg" media="(max-width: 480px)">
+							<source srcset="/assets/images/example-768x768.jpg" media="(max-width: 768px)">
+							<source srcset="/assets/images/example-1024x1024.jpg" media="(max-width: 1024px)">
+							<img srcset="/assets/images/example-original.jpg" alt="…">
+						</picture>
 					</div>
 				</div>
-			</div>
 
-			<hr>
-
-			<!-- Images code -->
-			<div>
-				<span id="sg-images" class="styleguide-title"><span>Responsive Images</span></span>
-				<div id="sg-image-responsive">
-					<span class="styleguide-title"><span>< Img ></span></span>
-					<img src="/assets/images/example-original.jpg" srcset="/assets/images/example-480x640.jpg 480w, /assets/images/example-768x768.jpg 768w, /assets/images/example-1024x1024.jpg 1024w" alt="example responsive image">
-				</div>
 				<hr>
-				<div id="sg-picture-responsive">
-					<span class="styleguide-title"><span>< Picture ></span></span>
-					<p>the &lt;picture&lg; html tag is usable only in the most recents browsers, but not usable in Internet Explorer, early version of Microsoft Edge (version 12 and below). source: <a href="https://caniuse.com/#search=picture">https://caniuse.com/#search=picture</a></p>
-					<picture>
-						<source srcset="/assets/images/example-480x640.jpg" media="(max-width: 480px)">
-						<source srcset="/assets/images/example-768x768.jpg" media="(max-width: 768px)">
-						<source srcset="/assets/images/example-1024x1024.jpg" media="(max-width: 1024px)">
-						<img srcset="/assets/images/example-original.jpg" alt="…">
-					</picture>
+				<div>
+					<span id="sg-videos" class="styleguide-title"><span>responsive video</span></span>
+					<div class="video-wrapper">
+						<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"; frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
-			</div>
 
-			<hr>
-			<div>
-				<span id="sg-videos" class="styleguide-title"><span>responsive video</span></span>
-				<div class="video-wrapper">
-					<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"; frameborder="0" allowfullscreen></iframe>
-				</div>
+				<!-- Back to top Button
+				--source: https://codyhouse.co/ds/components/info/back-to-top-->
+				<a class="back-to-top js-back-to-top" href="#" data-offset="1000" data-duration="300">
+					<svg class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+				</a>
 			</div>
-
-			<!-- Back to top Button
-			--source: https://codyhouse.co/ds/components/info/back-to-top-->
-			<a class="back-to-top js-back-to-top" href="#" data-offset="1000" data-duration="300">
-				<svg class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
-			</a>
 		</div>
-	</div>
-	<!-- END Styleguide -->
+		<!-- END Styleguide -->
 
-	<!-- Footer -->
-	<footer class="footer">
-        <div class="container-wrapper">
-            <div class="footer_upper">
-                <section class="footer_upper_left">
-                    <h2>Let's talk<span class="line"></span></h2>
-                    <p>Get in touch with us</p>
-                    <p class="email">info@abc.com</p>
-                    <p class="phone">514.000.6666</p>
-                </section>
-                <section class="footer_upper_right">
-                    <h6>Newsletter title</h6>
-                </section>
-            </div>
-            <div class="footer_bottom">
-                <section class="footer_bottom_left">
-                    <span class="copyright">2019, Copyright &copy;</span>
-                    <span class="divider"> | </span>
-                    <a href="en/terms" class="link">Terms & Conditions</a>
-                </section>
-                <section class="footer_bottom_middle">
-                    <address class="address">
-                        <span>333 Ste-Catherine East,</span> <span>Montreal, Qc  H0H 0H0</span>
-                    </address>
-                </section>
-                <section class="footer_bottom_right socials">
-                    <a href="https://www.facebook.com/Projetmtl" target="_blank">
-                        <span class="i-facebook"></span>
-                    </a>
-                    <a href="https://twitter.com/Projet"  target="_blank">
-                        <span class="i-twitter"></span>
-                    </a>
-                    <a href="https://www.linkedin.com/company/Projet-multimedia"  target="_blank">
-                        <span class="i-linkedin"></span>
-                    </a>
-                </section>
-            </div>
-        </div>
-    </footer>
-	<!-- END Footer -->
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container-wrapper">
+				<div class="footer_upper">
+					<section class="footer_upper_left">
+						<h2>Let's talk<span class="line"></span></h2>
+						<p>Get in touch with us</p>
+						<p class="email">info@abc.com</p>
+						<p class="phone">514.000.6666</p>
+					</section>
+					<section class="footer_upper_right">
+						<h6>Newsletter title</h6>
+					</section>
+				</div>
+				<div class="footer_bottom">
+					<section class="footer_bottom_left">
+						<span class="copyright">2019, Copyright &copy;</span>
+						<span class="divider"> | </span>
+						<a href="en/terms" class="link">Terms & Conditions</a>
+					</section>
+					<section class="footer_bottom_middle">
+						<address class="address">
+							<span>333 Ste-Catherine East,</span> <span>Montreal, Qc  H0H 0H0</span>
+						</address>
+					</section>
+					<section class="footer_bottom_right socials">
+						<a href="https://www.facebook.com/Projetmtl" target="_blank">
+							<span class="i-facebook"></span>
+						</a>
+						<a href="https://twitter.com/Projet"  target="_blank">
+							<span class="i-twitter"></span>
+						</a>
+						<a href="https://www.linkedin.com/company/Projet-multimedia"  target="_blank">
+							<span class="i-linkedin"></span>
+						</a>
+					</section>
+				</div>
+			</div>
+		</footer>
+		<!-- END Footer -->
+	</div>
 
 	<!-- Add custom JS libraries here -->
 	<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 	<!-- Autocomplete JS main minified file called below -->
-	<script src="assets/js/autocomplete.min.js"></script>
+	<!-- <script src="assets/js/autocomplete.min.js"></script> -->
 	<script src="assets/js/site.js"></script>
 </body>
 </html>

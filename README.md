@@ -14,5 +14,5 @@ The commands you will have to use the most often in the CMD:
 - `gulp watch`: run this command to watch the files for changes every time you launch your project
 
 
-### Description
-This project is actually a demo of the scrollable animated SVG background based on this inspiration found on (Codepen)[https://codepen.io/isladjan/pen/abdyPBw]
+<!-- ### Description
+This project is actually a demo of the scrollable animated SVG background based on this inspiration found on [Codepen](https://codepen.io/isladjan/pen/abdyPBw), with a default HTML styleguide page, just to give more content & height to the page. -->
