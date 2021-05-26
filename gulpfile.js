@@ -73,9 +73,9 @@ function img() {
 // Watch files
 
 function watchFiles() {
-    watch('./src/styles/*', css);
-    watch('./src/js/*', js);
-    watch('./src/img/*', img);
+    watch('./src/styles/**/*', css);
+    watch('./src/js/**/*', js);
+    watch('./src/img/**/*', img);
 }
 
 // BrowserSync
