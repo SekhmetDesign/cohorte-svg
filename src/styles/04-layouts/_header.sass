@@ -1,0 +1,153 @@
+// Header
+// -------------------------------------------------------------------------------
+#header
+	position: initial
+	width: auto
+	background-color: lighten($color-green, 30%)
+	font-weight: bold
+	padding-top: 35px
+	padding-bottom: 30px
+	a
+		text-transform: uppercase
+	&.hidden
+		display: none
+		visibility: hidden
+
+.nav
+	margin-left: auto
+	margin-right: auto
+	max-width: $grid-max-width
+	display: flex
+	justify-content: space-between
+	padding: .75em 0
+	@media only screen and (max-width: $grid-small)
+		flex-direction: column
+
+.nav-left
+	display: flex
+	#lang
+		font-size: .75rem
+		line-height: 1
+		color: darken($color-base, 50%)
+		+underlineOnHover(2px, $color-green)
+		transition: opacity .25s ease
+		letter-spacing: 0
+		&:after
+			bottom: 10px
+
+.nav-right
+	font-size: .875rem
+	transition: height .35s ease .2s
+	a
+		color: darken($color-base, 50%)
+	@media only screen and (max-width: $grid-small)
+		position: absolute
+		background-color: rgba($color-green, .95)
+		top: 0
+		left: 0
+		height: 0
+		overflow-y: hidden
+		width: 100%
+		z-index: 200
+		display: flex
+		align-items: center
+		a
+			color: $color-white
+
+.nav-home
+	height: auto
+	margin-right: 1.2em
+
+.nav-home-logo
+	width: 60px
+
+.nav-list
+	list-style: none
+	margin-left: 0
+	max-height: 730px
+	@media only screen and (max-width: $grid-small)
+		display: flex
+		flex-direction: column
+		width: 100%
+
+.nav-list-item
+	display: inline
+	margin-left: 3em
+	margin-bottom: 0
+	padding: 0
+	a
+		+underlineOnHover(2px, $color-green)
+		transition: opacity .25s ease
+	@media only screen and (max-width: $grid-small)
+		text-align: center
+		margin-left: 0
+		height: calc(100vh / 7)
+		display: table
+		width: 100vw
+		a
+			height: 100%
+			font-size: 1.75rem
+			display: table-cell
+			vertical-align: middle
+			opacity: 0
+			color: $color-white
+			&:hover
+				background-color: $color-white
+				color: $color-green !important
+
+.nav-hamMenu
+	display: none
+	cursor: pointer
+	position: absolute
+	width: 35px
+	height: 27px
+	right: 5%
+	top: .75em
+	z-index: 201
+	&:hover .hamMenu-bar
+		opacity: .8
+	@media only screen and (max-width: $grid-small)
+		display: block
+		margin-top: 35px
+
+.hamMenu-bar
+	width: 100%
+	position: absolute
+	display: block
+	background: darken($color-base, 50%)
+	height: 5px
+	transition: opacity .25s ease, transform .25s ease, background-color .25s ease .35s
+	&#top
+		top: 0
+	&#middle
+		top: 11px
+	&#bottom
+		top: 22px
+
+// Modifiers
+.nav--open
+	position: fixed
+	width: 100%
+	.nav-right
+		height: 100vh
+		transition: height .35s ease
+	.nav-list-item a
+		opacity: 1
+		transition: opacity .25s ease .2s
+	.hamMenu-bar
+		background-color: $color-white
+		transition: all .25s ease
+		&#top
+			transform: translateY(11px) translateX(0) rotate(45deg)
+		&#middle
+			opacity: 0
+		&#bottom
+			transform: translateY(-11px) translateX(0) rotate(-45deg)
+
+// Utilities
+// -------------------------------------------------------------------------------
+#logo-light
+	display: none
+
+#logo-dark
+	display: inline-block

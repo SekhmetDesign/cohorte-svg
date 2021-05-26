@@ -1,0 +1,83 @@
+@use "sass:math"
+
+// .card-circle
+//     width: 25%
+
+.circle-chart-wrapper
+	position: relative
+.circle-graphics-wrapper
+	position: relative
+.circle-col
+	stroke: url(#grad)
+	stroke-width: 32
+	fill: lighten($color-base, 75%)
+	animation: fillup 2s linear 1
+	animation-direction: reverse
+
+.circle-mask
+	fill: $color-white
+
+.svg-main
+	width: 160px
+	height: 160px
+	transform: rotate(-145deg)
+	background: lighten($color-base, 75%)
+	border-radius: 50%
+	border: none
+	display: block
+	margin: auto
+.svg-mask
+	position: absolute
+	width: 130px
+	height: 130px
+	border-radius: 50%
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+
+@keyframes fillup
+	to
+		stroke-dasharray: 0 100
+
+.graphics-percent
+	font-weight: 700
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	margin: 0 auto
+
+//// progress bars
+.graphs-progress-container
+	height: 20px
+	width: 100%
+	background-color: $color-white
+	margin: 8px 0 15px 0
+	.graph-progress-bar
+		height: 100%
+		background-image: linear-gradient(160.55deg, $color-green 0%, $color-blue 100%)
+		color: $color-white
+		font-weight: 400
+		font-size: 0.8125rem
+		text-align: right
+		line-height: 20px
+		padding-right: 5px
+		min-width: 10%
+		animation: fillbar 1s linear 1
+		animation-direction: reverse
+		&.no-text
+			color: transparent
+.card-progress-container
+	height: 12px
+	width: 100%
+	background-color: $color-white
+	margin: math.div($gutter-width, 2) 0 $gutter-width
+	.progress-bar
+		height: 100%
+		width: 75%
+		background-image: linear-gradient(160.55deg, $color-green 0%, $color-blue 100%)
+
+@keyframes fillbar
+	to
+		width: 10%

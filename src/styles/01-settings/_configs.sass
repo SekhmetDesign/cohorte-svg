@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito')
+
+// Components Variables
+$haveButton			:		true
+$haveMessage		:		true
+$havePagination		:		true
+$haveTabs			:		true
+
+$grid-xxsmall		: 320px
+$grid-xsmall		: 480px
+$grid-small			: 600px
+$grid-medium		: 768px
+$grid-large			: 1024px
+$grid-xlarge		: 1180px
+
+$grid-max-width: 1440px
+$grid-min-width: $grid-xxsmall
+$gutter-width: 20px
+
+// Typography
+$base-font-size      : 16px
+$base-line-height    : 1.6
+$base-font-family    : 'Gotham', Arial, Helvetica, sans-serif
+$headings-font-family: 'Nunito', sans-serif
+
+// Transitions (Defaults if you don't pass parameters to +transition())
+$default-transition-duration   : 0.3s
+$default-transition-function   : ease
+$default-transition-delay      : 0s
+
+// Colors
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/ GOLD!
+$color-base: #000000
+$color-link: #57B86E
+$color-error: #cf4339
+$color-white: #fff
+$color-black: #000
+$color-orange: #f17d49
+$color-green: #57B86E
+$color-blue: #2812f1
+
+// @mixin generate-brand-classes($src: $palettes) {
+// 	@each $palette in $src {
+// 		$types: nth($palette, 1)
+// 		$tones: nth($palette, 2)
+
+// 		@each $tone in $tones {
+// 			$variation: nth($tone, 1)
+// 			$val: nth($tone, 2)
+
+// 			@if($variation == 'base') {
+// 				.brand-#{$types} {
+//                     color: $val
+//                 }
+// 				.brand-#{$types}-bg {
+//                     background-color: $val
+//                 }
+// 			} @else {
+// 				.brand-#{$types}-#{$variation} {
+//                     color: $val
+//                 }
+// 				.brand-#{$types}-#{$variation}-bg {
+//                     background-color: $val
+//                 }
+// 			}
+// 		}
+// 	}
+// }
+
+
+// Borders
+$base-border: 1px lighten($color-base, 75%) solid
+$base-border-color: lighten($color-base, 75%)
+$base-border-radius: 0px
+
+// Cards
+$cards-per-row-large: 4 !default
+$cards-per-row-desktop: 3 !default
+$cards-per-row-tablet: 2 !default
+$card-color: $color-base !default
+$card-background-color: $color-white !default
+$card-border-width: 1px !default
+$card-shadow: 0 2px 3px rgba($color-black, 0.1), 0 0 0 1px rgba($color-black, 0.1) !default
+$card-header-background-color: none !default
+$card-header-color: $color-link !default
+$card-header-shadow: 0 1px 2px rgba($color-black, 0.1) !default
+$card-header-shadow-hover: 0px 8px 12px rgba($color-black, 0.7) !default
+$card-header-weight: 700 !default
+$card-content-background-color: none !default
+$card-footer-background-color: none !default
+$card-footer-border-top: 1px solid $color-base !default
+
+// Progress bar
+$progress-bar-background-color: $color-blue !default
+$progress-value-background-color: $color-white !default

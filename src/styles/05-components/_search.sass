@@ -1,0 +1,96 @@
+// Based on Autocomplete JS
+// DOCUMENTATION: https://tarekraafat.github.io/autoComplete.js/#/?id=introduction
+
+#autoComplete_results_list
+	display: none
+	max-hieght: 150px
+	overflow: auto
+	width: 300px
+	border: 1px solid lighten($color-base, 90%)
+	margin: 0
+	padding: 0 10px
+	list-style: none
+
+.autoComplete_result
+	margin: .15rem auto
+	padding: 10px
+	max-width: 280px
+	border: 1px solid lighten($color-base, 90%)
+	list-style: none
+	color: $color-link
+	text-transform: capitalize
+	transition: all .1s ease-in-out
+
+.autocomplete
+	position: relative
+
+.in
+	width: 300px
+	border: 1px solid $color-link
+	position: relative
+	outline: none
+	caret-color: $color-base
+	transition: all 0.4s ease
+	-webkit-transition: all -webkit-transform 0.4s ease
+	text-overflow: ellipsis
+
+.out
+	position: relative
+	width: 300px
+	outline: none
+	border: 1px solid lighten($color-base, 90%)
+	caret-color: $color-base
+	transition: all 0.4s ease
+	-webkit-transition: all -webkit-transform 0.4s ease
+	text-overflow: ellipsis
+
+.mode
+	margin-top: 20px
+	margin-bottom: 40px
+
+.toggele
+	display: flex
+	position: abolute
+	border: 1px solid lighten($color-base, 90%)
+	height: 35px
+	width: 120px
+	border-radius: 50px
+	justify-content: flex-start
+	align-content: center
+	transition: all 0.4s ease
+
+.toggeler
+	display: grid
+	cursor: pointer
+	background-color: lighten($color-link, 40%)
+	color: $color-base
+	height: 25px
+	width: 60px
+	border-radius: 50px
+	margin: 5px
+	text-align: center
+	align-content: center
+	align-self: flex-start
+	transition: all 0.4s ease
+	user-select: none
+	-webkit-user-select: none
+	-moz-user-select: none
+	-webkit-touch-callout: none
+
+.toggeler:hover
+	width: 70px
+	background-color: $color-link
+	color: $color-white
+
+.toggeler::selection
+	color: $color-white
+
+.strict
+	display: inline
+
+.loose
+	display: inline
+
+.selection
+	font-weight: bold
+	transition: all 0.4s ease

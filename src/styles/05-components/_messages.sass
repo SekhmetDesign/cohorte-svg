@@ -1,0 +1,21 @@
+@if $haveMessage == true
+	// Messages
+	// -------------------------------------------------------------------------------
+	%msg
+		border-radius: 0.1875em
+		padding: 0.6em 1em
+		margin-bottom: $base-line-height * 0.5em
+		text-align: center
+
+	.msg-info
+		background-color: lighten($color-base, 75%)
+		@extend %msg
+
+	.msg-success
+		background-color: lighten($color-base, 75%)
+		@extend %msg
+
+	.msg-error
+		@extend %msg
+		background-color: $color-error
+		color: #fff

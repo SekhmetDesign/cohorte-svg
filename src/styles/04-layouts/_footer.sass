@@ -1,0 +1,121 @@
+// Footer
+// -------------------------------------------------------------------------------
+.footer
+	background-color: lighten($color-green, 30%)
+	padding: 0 0 $gutter-width * 2
+	margin-top: $gutter-width*4
+
+.footer_upper,
+.footer_bottom
+	display: flex
+	flex-wrap: nowrap
+	justify-content: space-between
+	align-items: center
+	h2,
+	h6
+		margin-bottom: 5px
+	h6
+		text-transform: uppercase
+		font-size: 0.875rem
+		line-height: 1.071428571428571
+		letter-spacing: 2px
+	p
+		margin: 0
+		padding: 0
+		line-height: 2
+		&.phone,
+		&.email
+			line-height: 1.5
+			a
+				letter-spacing: 0
+				display: inline-block
+		&.phone
+			a
+				color: $color-base
+				&:hover,
+				&:focus
+					color: $color-base
+	.mc-input-group
+		position: relative
+		height: 40px
+		input
+			position: absolute
+			width: 100%
+			z-index: 2
+			height: 40px
+			color: lighten($color-base, 75%)
+			&:focus
+				color: $color-base
+		button
+			position: absolute
+			width: 40px
+			height: 40px
+			z-index: 4
+			right: 0
+			outline: none
+			border: 0
+			background-color: transparent
+			margin: 0
+			padding: 0
+			i
+				font-size: .5rem
+	.footer_upper_left,
+	.footer_upper_right
+		width: 50%
+		margin: 0
+		padding: 0
+	.footer_upper_right
+		max-width: 305px
+		align-self: center
+	@media only screen and (max-width: $grid-small - 1px)
+		flex-wrap: wrap
+		flex-direction: row
+		justify-content: flex-start
+		.footer_upper_left,
+		.footer_upper_right
+			width: 100%
+		.footer_upper_right
+			order: 2
+
+			max-width: unset
+		.footer_upper_left
+			order: 1
+			margin-bottom: 40px
+		.footer_bottom_left
+			order: 3
+			margin-top: 40px
+			width: 100%
+		.footer_bottom_middle
+			order: 2
+			margin-top: 40px
+			width: 100%
+		.footer_bottom_right
+			order: 1
+			width: 100%
+.footer_upper
+	padding: 40px 0
+	border-top: 1px solid lighten($color-base, 75%)
+.footer_bottom
+	padding: 10px 0 40px
+	font-size: 0.875rem !important
+	line-height: 1.071428571428571
+	a
+		letter-spacing: 0
+		font-size: 0.875rem
+		line-height: 1.071428571428571
+	.socials
+		font-size: 1.5rem
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		a
+			span
+				font-size: 1.5rem
+				margin: 0
+				padding: 0 0 0 10px
+	@media only screen and (max-width: $grid-small - 1px)
+		justify-content: center
+		text-align: center
+		padding-top: 0
+		.socials
+			justify-content: center

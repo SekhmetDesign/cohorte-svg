@@ -1,0 +1,84 @@
+.cards
+	margin-top: $gutter-width * 2
+	margin-bottom: $gutter-width * 2
+	flex-wrap: wrap
+	display: flex
+
+.card
+	background-color: $card-background-color
+	color: $color-base
+	position: relative
+	margin-bottom: $gutter-width
+	margin-top: $gutter-width
+	margin-right: $gutter-width
+	//width: calc( (100% - (($cards-per-row-large - 1) * $gutter-width)) / $cards-per-row-large)
+	width: calc( (100% - (3 * 20px)) / 4)
+	&:last-child,
+	&:nth-child(4n)
+		margin-right: 0
+	&.card-style
+		border: $card-border-width solid lighten($color-base, 90%)
+		//width: calc((100% - ((($cards-per-row-large - 1) * $gutter-width) + (($card-border-width * 2) * $cards-per-row-large))) / $cards-per-row-large)
+		width: calc( (100% - ( (3 * 20px) + (2 * 4) ) ) / 4)
+	@media only screen and (max-width: $grid-large - 1px)
+		//width: calc((100% - ($gutter-width + ($card-border-width * $cards-per-row-desktop))) / $cards-per-row-desktop)
+		width: calc( (100% - (2 * 20px) ) / 3)
+		&:last-child,
+		&:nth-child(4n)
+			margin-right: $gutter-width
+		&:nth-child(3n)
+			margin-right: 0
+		&.card-style
+			//width: calc((100% - (($cards-per-row-desktop * $gutter-width) + (($card-border-width * 2) * $cards-per-row-desktop))) / $cards-per-row-desktop)
+			width: calc( ( 100% - ( (2 * 20px) + 6px ) ) / 3 )
+	@media only screen and (max-width: $grid-medium - 1px)
+		//Explanations width: calc((100% - ($gutter-width + ($card-border-width * $cards-per-row-tablet))) / $cards-per-row-tablet)
+		width: calc( (100% - 20px ) / 2)
+		&:last-child,
+		&:nth-child(4n),
+		&:nth-child(3n)
+			margin-right: $gutter-width
+		&:nth-child(even)
+			margin-right: 0
+		&.card-style
+			//width: calc((100% - ($gutter-width + (($card-border-width * 2) * $cards-per-row-tablet))) / $cards-per-row-tablet)
+			width: calc( ( 100% - ( 20px + 4px ) ) / 2 )
+	@media only screen and (max-width: $grid-xsmall - 1px)
+		width: 100%
+		margin-right: 0
+		&.card-style
+			//width: calc(100% - ($card-border-width * 2))
+			width: calc(100% - 2px)
+
+.card-header
+	background-color: $card-header-background-color
+	align-items: stretch
+	display: flex
+
+.card-image
+	display: flex
+	justify-content: center
+	align-items: center
+	img
+		object-fit: cover
+
+.card-content
+	background-color: $card-content-background-color
+	padding: $gutter-width
+
+.card-footer
+	background-color: $card-footer-background-color
+	border-top: $card-footer-border-top
+	align-items: stretch
+	display: flex
+
+.card-footer-item
+	align-items: center
+	display: flex
+	flex-basis: 0
+	flex-grow: 1
+	flex-shrink: 0
+	justify-content: center
+	padding: 0.75rem
+	&:not(:last-child)
+		border-right: $card-footer-border-top

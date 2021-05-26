@@ -1,0 +1,107 @@
+@if $haveButton == true
+
+	// Default Buttons
+	// -------------------------------------------------------------------------------
+	%b
+		background-color: $color-link
+		border-radius: $base-border-radius
+		border: 0
+		color: $color-white
+		display: inline-block
+		font-weight: bold
+		padding: 0.75em 2em
+		text-decoration: none
+		text-align: center
+		font-family: $headings-font-family
+		&:hover,
+		&:focus, // accessibility
+		&.active
+			background-color: darken($color-link, 20%)
+			color: $color-white
+
+	.b
+		@extend %b
+
+		// Disable
+		// -------------------------------------------------------------------------------
+		&-disable
+			opacity: .5
+			pointer-events: none
+
+	// Sizes
+	// Use .xsmall, .small, .medium, .large, .xlarge
+	// Any other custom sizes goes here
+	// -------------------------------------------------------------------------------
+
+
+
+	// Styles
+	// -------------------------------------------------------------------------------
+	.b1
+		background-color: transparent
+		box-shadow: inset 0 0 0 0.125em $color-link
+		border-radius: $base-border-radius
+		color: $color-link
+		&:hover
+			background-color: $color-link
+
+
+	// Loading
+	// -------------------------------------------------------------------------------
+	.b-loading
+		position: relative
+		span
+			display: block
+			position: absolute
+			top: 50%
+			left: 1em
+			margin-top: -0.625em
+			width: 1em
+			height: 1em
+			transition: transform 0.3s ease
+			transform: scale(0)
+
+			&:after
+				border: 0.15em solid rgba($color-white, 0.1)
+				border-left: 0.15em solid $color-white
+				border-radius: 100%
+				content: ""
+				display: block
+				width: 100%
+				height: 100%
+				animation: rotate 0.8s infinite linear
+
+		&.active
+			padding-right: 1.25em
+			padding-left: 2.75em
+			span
+				transform: scale(1)
+
+	// Back to top
+	// --source: https://codyhouse.co/ds/components/info/back-to-top
+	// -------------------------------------------------------------------------------
+	.back-to-top
+		position: fixed
+		right: 1%
+		bottom: 1%
+		padding: 16px
+		z-index: 100
+		border-radius: 0.25em
+		background-color: lighten($color-base, 75%)
+		transition: 0.3s
+
+		&:hover
+			background-color: $color-link
+
+		.icon
+			display: block
+			color: $color-base
+			width: 44px
+			height: 44px
+		.js &
+			.back-to-top // if JS is enabled, hide back to top
+				visibility: hidden
+				opacity: 0
+			.back-to-top--is-visible // show button
+				visibility: visible
+				opacity: 1

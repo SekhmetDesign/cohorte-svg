@@ -1,0 +1,32 @@
+@use "sass:math"
+
+html, body
+	height: 100%
+	scroll-behavior: smooth
+
+html
+	@media screen and (max-width: $grid-medium), screen and (max-device-width: $grid-large)
+		-ms-text-size-adjust: none
+		-webkit-text-size-adjust: none
+
+body
+	color: $color-base
+	font-size: math.div($base-font-size, 16px)
+	font-family: $base-font-family
+	line-height: $base-line-height
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	.no-mediaqueries &
+		min-width: $grid-max-width
+
+.container-wrapper
+	margin: 0 auto
+	width: 100%
+	max-width: $grid-max-width
+	@media only screen and (max-width: $grid-max-width + 80px)
+		margin: 0 40px
+		width: calc(100% - 80px)
+		max-width: unset
+	@media only screen and (max-width: $grid-medium - 1px)
+		margin: 0 5%
+		width: 90%
