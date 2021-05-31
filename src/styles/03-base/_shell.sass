@@ -21,12 +21,15 @@ body
 		min-width: $grid-max-width
 
 .site-bg
+	height: auto
+	min-height: 100vh
 	position: absolute
 	z-index: 1	
 
 .site-content
 	display: flex
 	flex-direction: column
+	height: auto
 	justify-content: space-between
 	min-height: 100vh
 	position: relative
@@ -34,12 +37,12 @@ body
 
 .container-wrapper
 	margin: 0 auto
-	width: 100%
 	max-width: $grid-max-width
+	width: 100%
 	@media only screen and (max-width: $grid-max-width + 80px)
 		margin: 0 40px
-		width: calc(100% - 80px)
 		max-width: unset
+		width: calc(100% - 80px)
 	@media only screen and (max-width: $grid-medium - 1px)
 		margin: 0 5%
 		width: 90%

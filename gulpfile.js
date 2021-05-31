@@ -35,10 +35,10 @@ function js() {
     return src(source)
         .pipe(changed(source))
         .pipe(concat('site.js'))
-        .pipe(uglify())
-        .pipe(rename({
-            extname: '.js'
-        }))
+        // .pipe(uglify())
+        // .pipe(rename({
+        //     extname: '.js'
+        // }))
         .pipe(dest('./assets/js/'))
         .pipe(browsersync.stream());
 }
